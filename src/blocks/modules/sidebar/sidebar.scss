@@ -1,0 +1,59 @@
+.content {
+    padding: 13px 0 105px 0;
+    display: flex;
+}
+.sidebar {
+    width: 300px;
+    &__title {
+        position: relative;
+        background-color: #378C06;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 18px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #F8F8F8;
+        &::after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            background: url(../../../img/sprites/arrow.svg) center no-repeat;
+            width: 16.67px;
+            height: 10.3px;
+            top: 50%;
+            right: 0;
+            transform: translate(-16px, -50%);
+        }
+    }
+    &__list {
+        margin-top: 10px;
+        &-item {
+            padding-bottom: 16px;
+            padding-left: 21px;
+            a {
+                display: block;
+                font-weight: 400;
+                font-size: 16px;
+                color: #000000;
+                text-decoration: none;
+            }
+            &--active {
+                position: relative;
+                ::before {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    width: 5px;
+                    height: 30px;
+                    background-color: #ff9800;
+                    top: 0%;
+                    left: 0;
+                    transform: translate(0px, -5px);
+                }
+            }
+        }
+        li:last-child {
+            padding-bottom: 13px;
+        }
+    }
+}
