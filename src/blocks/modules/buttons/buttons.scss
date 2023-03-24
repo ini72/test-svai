@@ -4,14 +4,17 @@
     cursor: pointer;
     &--main {
         padding-top: 13px;
+        padding-right: 18px;
         padding-bottom: 13px;
         padding-left: 24px;
-        width: 222px;
-        height: 40px;
         background: #F06800;
         border-radius: 0px 0px 2px 2px;
         font-size: 14px;
         text-align: left;
+        transition: all .3s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &--secondary {
         width: 170px;

@@ -44,52 +44,60 @@
     }
     &__card-wrapper {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
     .card {
-        min-height: 288px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: 288px;
         margin-right: 15px;
         margin-bottom: 20px;
         background: #FFFFFF;
         box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 2px;
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
         &__img {
             img {
                 max-width: 100%;
             }
         }
         &__title {
-            padding-top: 5px;
+            padding-top: 2px;
             padding-left: 6px;
             font-weight: 400;
             font-size: 18px;
             color: #000000;
         }
         &__subtitle {
-            padding-top: 10px;
+            padding-top: 7px;
             padding-left: 6px;
             font-weight: 400;
             font-size: 12px;
             color: #969696;
+            span {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000000; 
+            }
         }
         &__size-price-wrapper {
             display: flex;
             align-items: center;
-            padding-top: 10px;
+            padding-top: 7px;
             padding-left: 6px;
         }
         &__size {
+            width: 77px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: #25A510;
             font-weight: 700;
             font-size: 16px;
             color: #FFFFFF;
-            text-align: center;
-            padding: 12px;
         }
         &__price {
             padding-left: 10px;
@@ -109,18 +117,34 @@
             }
         }
         &__about {
-            margin-top: 10px;
-            position: relative;
-            ::after {
-                content: '';
-                position: absolute;
-                display: inline-block;
-                background: url(../../../img/sprites/arrow-2.svg) center no-repeat;
-                width: 21px;
-                height: 8px;
-                top: 50%;
-                right: 0;
-                transform: translate(-16px, -50%);
+            margin-top: 8px;
+        }
+        &:hover .button--main {
+            background: #fff;
+            color: #f06800;
+            text-decoration: underline;
+            path {
+                fill: #F06800;
+            }
+        }
+        .front-back-blocks {
+            overflow: hidden;
+            &:hover .front-block {
+                margin-left: -200px;
+            }
+            &:hover .back-block {
+                margin-left: 0;
+            }
+            .front-block, .back-block {
+                float: left;
+                transition: all .4s;
+            }
+            .back-block {
+                padding-top: 7px;
+                margin-left: -400px;
+                .card__subtitle {
+                    padding-top: 0;
+                }
             }
         }
     }
