@@ -1,5 +1,6 @@
 .sidebar {
-    width: 300px;
+    min-width: 300px;
+    padding-top: 13px;
     &__title {
         position: relative;
         background-color: #378C06;

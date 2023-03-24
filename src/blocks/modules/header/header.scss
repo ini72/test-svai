@@ -6,6 +6,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 4px;
         svg {
             width: 20px;
             height: 20px;
@@ -51,8 +52,10 @@
         .work-time {
             min-height: 48px;
             display: flex;
-            span {
+            &__days {
                 margin-left: 8px;
+            }
+            span {
                 font-size: 16px;
                 line-height: 19px;
                 color: #212121;

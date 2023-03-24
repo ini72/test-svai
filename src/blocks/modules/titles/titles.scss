@@ -1,0 +1,12 @@
+.title {
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #333333;
+    &--mini {
+        font-weight: 400;
+        font-size: 18px;
+        color: #000000;
+        text-transform: none;
+    }
+}
